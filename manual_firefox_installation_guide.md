@@ -16,7 +16,7 @@ Extract the downloaded file directly into the `/opt` directory to make it access
 
 * If you downloaded a `.tar.xz` file, use the `-xJf` or `-xvf` flags:
 ```bash
-sudo tar -xvf firefox-157.0.tar.xz -C /opt/
+sudo tar -xvf firefox-159.0.tar.xz -C /opt/
 ```
 * If you downloaded a `.tar.bz2` file, use the `-xjvf` flags:
 ```bash
