@@ -20,7 +20,7 @@ sudo tar -xvf firefox-157.0.tar.xz -C /opt/
 ```
 * If you downloaded a `.tar.bz2` file, use the `-xjvf` flags:
 ```bash
-sudo tar -xjvf firefox-157.0.tar.bz2 -C /opt/
+sudo tar -xjvf firefox-159.0.tar.bz2 -C /opt/
 ```
 
 ## Step 3: Set Up the Executable Symlink
