@@ -1,14 +1,14 @@
 # How to Manually Install a Specific Version of Firefox on Ubuntu
 
-This guide covers how to install a specific version of Mozilla Firefox (e.g., `157.0`) manually using the official binaries, bypassing Snap and APT.
+This guide covers how to install a specific version of Mozilla Firefox (e.g., `159.0`) manually using the official binaries, bypassing Snap and APT.
 
 ## Step 1: Download the Specific Firefox Build
 First, download the official `.tar.xz` (or `.tar.bz2`) archive directly from Mozilla's release server. 
 
-*(Note: Replace `157.0` with your exact target version in the URL and file names below)*
+*(Note: Replace `159.0` with your exact target version in the URL and file names below)*
 
 ```bash
-wget https://ftp.mozilla.org/pub/firefox/releases/157.0/linux-x86_64/en-US/firefox-157.0.tar.xz
+wget https://ftp.mozilla.org/pub/firefox/releases/159.0/linux-x86_64/en-US/firefox-159.0.tar.xz
 ```
 
 ## Step 2: Extract the Archive to /opt
