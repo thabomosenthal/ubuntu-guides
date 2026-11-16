@@ -8,7 +8,7 @@ First, download the official `.tar.xz` (or `.tar.bz2`) archive directly from Moz
 *(Note: Replace `160.0` with your exact target version in the URL and file names below)*
 
 ```bash
-wget https://ftp.mozilla.org/pub/firefox/releases/159.0/linux-x86_64/en-US/firefox-160.0.tar.xz
+wget https://ftp.mozilla.org/pub/firefox/releases/160.0/linux-x86_64/en-US/firefox-160.0.tar.xz
 ```
 
 ## Step 2: Extract the Archive to /opt
