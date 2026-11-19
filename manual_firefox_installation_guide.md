@@ -1,14 +1,14 @@
 # How to Manually Install a Specific Version of Firefox on Ubuntu
 
-This guide covers how to install a specific version of Mozilla Firefox (e.g., `160.0`) manually using the official binaries, bypassing Snap and APT.
+This guide covers how to install a specific version of Mozilla Firefox (e.g., `160.0.1`) manually using the official binaries, bypassing Snap and APT.
 
 ## Step 1: Download the Specific Firefox Build
 First, download the official `.tar.xz` (or `.tar.bz2`) archive directly from Mozilla's release server. 
 
-*(Note: Replace `160.0` with your exact target version in the URL and file names below)*
+*(Note: Replace `160.0.1` with your exact target version in the URL and file names below)*
 
 ```bash
-wget https://ftp.mozilla.org/pub/firefox/releases/160.0/linux-x86_64/en-US/firefox-160.0.tar.xz
+wget https://ftp.mozilla.org/pub/firefox/releases/160.0.1/linux-x86_64/en-US/firefox-160.0.1.tar.xz
 ```
 
 ## Step 2: Extract the Archive to /opt
@@ -16,11 +16,11 @@ Extract the downloaded file directly into the `/opt` directory to make it access
 
 * If you downloaded a `.tar.xz` file, use the `-xJf` or `-xvf` flags:
 ```bash
-sudo tar -xvf firefox-160.0.tar.xz -C /opt/
+sudo tar -xvf firefox-160.0.1.tar.xz -C /opt/
 ```
 * If you downloaded a `.tar.bz2` file, use the `-xjvf` flags:
 ```bash
-sudo tar -xjvf firefox-160.0.tar.bz2 -C /opt/
+sudo tar -xjvf firefox-160.0.1.tar.bz2 -C /opt/
 ```
 
 ## Step 3: Set Up the Executable Symlink
