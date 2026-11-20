@@ -14,18 +14,17 @@ sudo modprobe zram && sudo swapoff /dev/zram0 2>/dev/null; sudo zramctl --reset 
 
 ## Fixing Media Playback Errors in Manually Installed Firefox
 
-### 1. If a manually extracted Firefox tarball throws NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) or [GFX1-]: Managed to allocate after flush.:
+If a manually extracted Firefox tarball throws NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) or [GFX1-]: Managed to allocate after flush.:
 
-#### Install ffmpeg and clear cached .deb files immediately:
+### Install ffmpeg and clear cached .deb files immediately:
 ```bash
-
     sudo apt update && sudo apt install -y ffmpeg && sudo apt clean
 ```
-#### Disable Hardware Acceleration & Disk Cache in Firefox:
-    Open about:preferences → Performance → uncheck Use recommended performance settings and uncheck Use hardware acceleration when available.
+### Disable Hardware Acceleration & Disk Cache in Firefox:
+Open `about:preferences → Performance → uncheck` Use recommended performance settings and uncheck Use hardware acceleration when available.
 
-        Open about:config → set browser.cache.disk.enable to false (prevents Firefox from filling the /cow RAM overlay with disk cache).
+Open `about:config` → set `browser.cache.disk.enable` to `false` (prevents Firefox from filling the /cow RAM overlay with disk cache).
 
-    Optional — Offload Firefox Binaries/Profile to /tmp:
+Optional — Offload Firefox Binaries/Profile to /tmp:
 
-        /tmp has its own dedicated tmpfs quota separate from /cow. Moving an extracted Firefox folder to /tmp/firefox keeps /cow usage low.
+ `/tmp has its own dedicated tmpfs quota separate from /cow. Moving an extracted Firefox folder to /tmp/firefox keeps /cow usage low.
