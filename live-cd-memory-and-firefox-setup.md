@@ -52,7 +52,7 @@ Make it executable and run it:
 
 If a manually extracted Firefox tarball throws ``NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005)`` or `[GFX1-]: Managed to allocate after flush.`:
 
-### 1. Install ffmpeg and clear cached .deb files immediately:
+##### 1. Install ffmpeg and clear cached .deb files immediately:
 ```bash
     sudo apt update && sudo apt install -y ffmpeg && sudo apt clean
 ```
