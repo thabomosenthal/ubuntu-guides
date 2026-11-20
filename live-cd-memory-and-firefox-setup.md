@@ -48,11 +48,11 @@ Make it executable and run it:
     sudo ./live-boost.sh
 ```
 
-## Fixing Media Playback Errors in Manually Installed Firefox
+## 3. Fixing Media Playback Errors in Manually Installed Firefox
 
-If a manually extracted Firefox tarball throws NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) or [GFX1-]: Managed to allocate after flush.:
+If a manually extracted Firefox tarball throws ``NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005)`` or `[GFX1-]: Managed to allocate after flush.`:
 
-### Install ffmpeg and clear cached .deb files immediately:
+### 1. Install ffmpeg and clear cached .deb files immediately:
 ```bash
     sudo apt update && sudo apt install -y ffmpeg && sudo apt clean
 ```
