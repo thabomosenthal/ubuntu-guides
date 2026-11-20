@@ -20,3 +20,7 @@ rm -rf /var/lib/apt/lists/* /var/log/journal/*
 # Verify memory and /cow usage
 free -h
 df -h /
+
+#! Make it executable and run it
+#! chmod +x live-boost.sh
+#! sudo ./live-boost.sh
