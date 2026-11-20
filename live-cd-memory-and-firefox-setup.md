@@ -12,18 +12,17 @@ Run this command right after booting into the Live environment to configure an 8
 sudo modprobe zram && sudo swapoff /dev/zram0 2>/dev/null; sudo zramctl --reset /dev/zram0 2>/dev/null; echo lz4 | sudo tee /sys/block/zram0/comp_algorithm >/dev/null && echo 8G | sudo tee /sys/block/zram0/disksize >/dev/null && sudo mkswap /dev/zram0 >/dev/null && sudo swapon -p 100 /dev/zram0 && sudo sysctl -w vm.swappiness=150 >/dev/null && sudo apt clean && sudo rm -rf /var/lib/apt/lists/* /var/log/journal/* && free -h && df -h /
 ```
 
-Fixing Media Playback Errors in Manually Installed Firefox
+## Fixing Media Playback Errors in Manually Installed Firefox
 
-If a manually extracted Firefox tarball throws NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) or [GFX1-]: Managed to allocate after flush.:
+### 1. If a manually extracted Firefox tarball throws NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) or [GFX1-]: Managed to allocate after flush.:
 
-    Install ffmpeg and clear cached .deb files immediately:
-    Bash
+#### Install ffmpeg and clear cached .deb files immediately:
+```bash
 
     sudo apt update && sudo apt install -y ffmpeg && sudo apt clean
-
-    Disable Hardware Acceleration & Disk Cache in Firefox:
-
-        Open about:preferences → Performance → uncheck Use recommended performance settings and uncheck Use hardware acceleration when available.
+```
+#### Disable Hardware Acceleration & Disk Cache in Firefox:
+    Open about:preferences → Performance → uncheck Use recommended performance settings and uncheck Use hardware acceleration when available.
 
         Open about:config → set browser.cache.disk.enable to false (prevents Firefox from filling the /cow RAM overlay with disk cache).
 
