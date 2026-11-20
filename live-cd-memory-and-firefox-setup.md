@@ -52,15 +52,15 @@ Make it executable and run it:
 
 If a manually extracted Firefox tarball throws ``NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005)`` or `[GFX1-]: Managed to allocate after flush.`:
 
-#### 1. Install `ffmpeg` and clear cached `.deb` files immediately:
+###### 1. Install `ffmpeg` and clear cached `.deb` files immediately:
 ```bash
     sudo apt update && sudo apt install -y ffmpeg && sudo apt clean
 ```
-2. Disable Hardware Acceleration & Disk Cache in Firefox:
+##### 2. Disable Hardware Acceleration & Disk Cache in Firefox:
 - Open `about:preferences → Performance → uncheck` Use recommended performance settings and uncheck Use hardware acceleration when available.
 
 - Open `about:config` → set `browser.cache.disk.enable` to `false` (prevents Firefox from filling the `/cow` RAM overlay with disk cache).
 
-3. Optional — Offload Firefox Binaries/Profile to `/tmp`:
+#### 3. Optional — Offload Firefox Binaries/Profile to `/tmp`:
 
  - `/tmp` has its own dedicated _tmpfs_ quota separate from `/cow`. Moving an extracted Firefox folder to `/tmp/firefox` keeps /cow usage low.
