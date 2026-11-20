@@ -21,6 +21,6 @@ rm -rf /var/lib/apt/lists/* /var/log/journal/*
 free -h
 df -h /
 
-#! Make it executable and run it
-#! chmod +x live-boost.sh
-#! sudo ./live-boost.sh
+# Make it executable and run it
+# chmod +x live-boost.sh
+# sudo ./live-boost.sh
